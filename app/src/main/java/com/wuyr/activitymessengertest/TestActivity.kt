@@ -23,6 +23,8 @@ class TestActivity : AppCompatActivity() {
     }
 
     fun ok(view: View) {
+        @Suppress("UNCHECKED_CAST")
+        val bb  = intent.get<List<*>>("ss") as List<String>
         //退出并设置参数
         ActivityMessenger.finish(this, "Result" to editText.text.toString())
     }
