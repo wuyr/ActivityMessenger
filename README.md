@@ -55,7 +55,6 @@
 
 ### startActivityForResult：
 ***方式1***（假设`TestActivity`是要启动的Activity）：
-***携带参数同startActivity。***
 ```kotlin
     //不携带参数
     ActivityMessenger.startActivityForResult<TestActivity>(this) {
@@ -65,9 +64,10 @@
             //处理成功，这里可以操作返回的intent
         }
     }
+    
+    //携带参数同startActivity。
 ```
 ***方式2***（假设`TestActivity`是要启动的Activity）：
-***携带参数同startActivity。***
 ```kotlin
     //不携带参数
     ActivityMessenger.startActivityForResult(this, TestActivity::class) {
@@ -78,6 +78,7 @@
         }
     }
     
+    //携带参数同startActivity。    
 ```
 <br/>
 
@@ -89,11 +90,15 @@
 <br/>
 
 ### getExtras（获取Intent参数）：
+***方式1***
 ```kotlin
+    //预先声明好类型
     var mData: List<String>? = null
     mData = intent.get("Key1")
-    
-    //或者
+```
+***方式2***
+```kotlin
+    //取出时再决定类型
     val result = intent.get<String>("Key2")
 ```
 <br/>
