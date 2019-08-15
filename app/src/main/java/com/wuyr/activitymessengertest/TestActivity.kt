@@ -3,6 +3,8 @@ package com.wuyr.activitymessengertest
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.wuyr.activitymessenger.ActivityMessenger
+import com.wuyr.activitymessenger.get
 import kotlinx.android.synthetic.main.act_test_view.*
 
 /**
