@@ -110,7 +110,7 @@ implementation 'com.wuyr:activitymessenger:1.0.1'
 ```
 
 ### 库源码地址： <https://github.com/Ifxcyr/ActivityMessenger>
-
+---
 ### 感谢：
 #### Jowan: <https://www.jowanxu.top/>
 #### RxActivityResult: <https://github.com/nekocode/RxActivityResult>
