@@ -55,6 +55,7 @@
 
 ### startActivityForResult：
 ***方式1***（假设`TestActivity`是要启动的Activity）：
+***携带参数同startActivity。***
 ```kotlin
     //不携带参数
     ActivityMessenger.startActivityForResult<TestActivity>(this) {
@@ -65,9 +66,8 @@
         }
     }
 ```
-***携带参数同startActivity。***
-<br/>
 ***方式2***（假设`TestActivity`是要启动的Activity）：
+***携带参数同startActivity。***
 ```kotlin
     //不携带参数
     ActivityMessenger.startActivityForResult(this, TestActivity::class) {
@@ -79,7 +79,6 @@
     }
     
 ```
-***携带参数同startActivity。***
 <br/>
 
 ### finish：
