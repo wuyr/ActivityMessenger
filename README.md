@@ -101,12 +101,19 @@
     //取出时再决定类型
     val result = intent.get<String>("Key2")
 ```
+
+***方式3***
+```kotlin
+    // 使用委托
+    val key3 by extraAct("key3", "test")
+    var key4: String? by extraAct("key4")
+```
 <br/>
 
 ### 使用方式：
 #### 添加依赖：
 ```
-implementation 'com.wuyr:activitymessenger:1.0.1'
+implementation 'com.wuyr:activitymessenger:1.0.2'
 ```
 
 ### 库源码地址： <https://github.com/Ifxcyr/ActivityMessenger>
