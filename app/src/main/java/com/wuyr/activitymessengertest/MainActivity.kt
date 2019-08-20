@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
 
     fun start(view: View) {
         val content = editText.text.toString()
-
         ActivityMessenger.startActivityForResult<TestActivity>(
             this, "Content" to content //put参数
         ) {
