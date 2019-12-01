@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.wuyr.activitymessenger.ActivityMessenger
 import com.wuyr.activitymessenger.get
+import com.wuyr.activitymessenger.startActivityForResult
 import kotlinx.android.synthetic.main.act_main_view.*
 
 /**
@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
     fun start(view: View) {
         val content = editText.text.toString()
-        ActivityMessenger.startActivityForResult<TestActivity>(
-            this, "Content" to content //put参数
+        startActivityForResult<TestActivity>(
+            "Content" to content //put参数
         ) {
             if (it == null) {
                 //未成功处理

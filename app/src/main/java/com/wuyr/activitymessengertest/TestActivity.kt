@@ -3,7 +3,7 @@ package com.wuyr.activitymessengertest
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.wuyr.activitymessenger.ActivityMessenger
+import com.wuyr.activitymessenger.finish
 import com.wuyr.activitymessenger.get
 import kotlinx.android.synthetic.main.act_test_view.*
 
@@ -26,6 +26,6 @@ class TestActivity : AppCompatActivity() {
         val result = editText.text.toString()
 
         //退出并设置参数
-        ActivityMessenger.finish(this, "Result" to result)
+        finish("Result" to result)
     }
 }
