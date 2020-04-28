@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/ActivityMessengerTest.iml" filepath="$PROJECT_DIR$/ActivityMessengerTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/ActivityMessengerTest-app.iml" filepath="$PROJECT_DIR$/app/ActivityMessengerTest-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projects-ActivityMessengerTest.iml" filepath="$PROJECT_DIR$/projects-ActivityMessengerTest.iml" group="ActivityMessengerTest" />
+      <module fileurl="file://$PROJECT_DIR$/app/projects-ActivityMessengerTest-app.iml" filepath="$PROJECT_DIR$/app/projects-ActivityMessengerTest-app.iml" group="ActivityMessengerTest/app" />
     </modules>
   </component>
 </project>
