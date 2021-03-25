@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.wuyr.activitymessenger.get
 import com.wuyr.activitymessenger.startActivityForResult
+import com.wuyr.activitymessenger.startActivityForResult2
 import kotlinx.android.synthetic.main.act_main_view.*
 
 /**
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     fun start(view: View) {
         val content = editText.text.toString()
+        //不接收resultCode
         startActivityForResult<TestActivity>(
             "Content" to content //put参数
         ) {
@@ -31,6 +33,19 @@ class MainActivity : AppCompatActivity() {
                 //处理成功
                 val result = it.get<String>("Result")
                 editText.setText(result)
+            }
+        }
+        //接收resultCode
+        startActivityForResult2<TestActivity>(
+            "Content" to content //put参数
+        ) { resultCode, intent ->
+            if (resultCode == RESULT_OK) {
+                //处理成功
+                val result = intent.get<String>("Result")
+                editText.setText(result)
+            } else {
+                //未成功处理
+                Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show()
             }
         }
     }
