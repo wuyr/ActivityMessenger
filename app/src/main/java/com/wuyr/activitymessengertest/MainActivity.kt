@@ -35,18 +35,18 @@ class MainActivity : AppCompatActivity() {
                 editText.setText(result)
             }
         }
-        //接收resultCode
-        startActivityForResult2<TestActivity>(
-            "Content" to content //put参数
-        ) { resultCode, intent ->
-            if (resultCode == RESULT_OK) {
-                //处理成功
-                val result = intent.get<String>("Result")
-                editText.setText(result)
-            } else {
-                //未成功处理
-                Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show()
-            }
-        }
+//        //接收resultCode
+//        startActivityForResult2<TestActivity>(
+//            "Content" to content //put参数
+//        ) { resultCode, intent ->
+//            if (resultCode == RESULT_OK) {
+//                //处理成功
+//                val result = intent.get<String>("Result")
+//                editText.setText(result)
+//            } else {
+//                //未成功处理
+//                Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show()
+//            }
+//        }
     }
 }
